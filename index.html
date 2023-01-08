@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Lesson24</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page__container">
+        <h1 class="big-title">JAVASCRIPT. Д/З </h1>
+        <div class="page__block">
+          <h2 class="title">Функції в JAVASCRIPT.</h2>
+          <p class="text"><mark>Задача 1.</mark> Коля! </p>
+          <p class="text"><mark>Задача 2.</mark> Вірно</p>
+          <p class="text"><mark>Задача 3.</mark> function Expression - викликати функцію потрібно після фукнкціонального
+            виразу</p>
+          <p class="text"><mark>Задача 4.</mark> Функцію потрібно викликати всередині блоку if або за межами блоку if
+            створити змінну і використати function Expression </p>
+        </div>
+        <div class="page__block">
+          <h2 class="title"> Масиви в JAVASCRIPT. Методи масивів. Редагування, пошук, сортування.</h2>
+          <p class="text"><mark>Задача 1.</mark> 4</p>
+          <p class="text"><mark>Задача 2.</mark>let Users = ['Ваня', 'Іштван',];<br>
+            Users.push('Оля');<br>
+            Users[1] = 'Петя';<br>
+            console.log(Users);<br>
+            console.log(Users.indexOf('Оля'));<br>
+            let result = Users.shift();<br>
+            console.log(result);<br>
+            Users.unshift('Маша','Паша');<br>
+            console.log(Users); </p>
+          <p class="text"><mark>Задача 3.</mark>let arr3 = ['Ваня', 'Іштван', 'Оля'];<br>
+            let removed = arr3.splice(1,1);<br>
+            console.log(removed); </p>
+          <p class="text"><mark>Задача 4.</mark>let str = 'Ваня,Іштван,Оля';<br>
+            let arr4 = str.split(',');<br>
+            console.log(arr4) </p>
+          <p class="text"><mark>Задача 5.</mark>9</p>
+        </div>
+        <div class="page__block">
+          <h2 class="title">JavaScript Document object model (DOM). Зміни HTML CSS. Атрибути та властивості.</h2>
+          <div class="attrtibute" data-say-hi="yes">Привiт!</div>
+          <ul>
+            <li>Корчі</li>
+            <li>Йончі</li>
+          </ul>
+          <div class="like"></div>
+          <div class="subscribe"></div>
+          <div class="like subscribe"></div>
+          <p class="text"><mark>Задача 1</mark> const varOne = document.querySelector('[data-say-hi]');<br>
+            const attr = varOne.getAttribute('data-say-hi');<br>
+            console.log(attr);</p>
+          <p class="text"><mark>Задача 2</mark> const elements = document.querySelectorAll('li');<br>
+            let text = elements[1].textContent;<br>
+            console.log(text);</p>
+          <p class="text"><mark>Задача 3</mark>const varThree = document.querySelectorAll('.like'); <br>
+            console.log(varThree);<br></p>
+          <p class="text"><mark>Задача 4</mark>Буде помилка. Замість ".querySelectorAll" потрібно використати
+            ".querySelector". (тоді li Текст li добавиться в кінець списку третім пунктом)</p>
+        </div>
+        <div class="page__block">
+          <h2 class="title">JavaScript розміри прокрутка и координати элементів на сторінці і вікні браузера.</h2>
+          <p class="text"><mark>Задача 1</mark>const mainElement = document.documentElement;<br>
+            const mainElementWidth = mainElement.clientWidth;<br>
+            console.log(mainElementWidth);<br>
+            <br>
+            const windowWidth = window.innerWidth;<br>
+            console.log(windowWidth);<br>
+            <br>
+            const scrollWidth = windowWidth - mainElementWidth;<br>
+            console.log(scrollWidth);</p>
+          <p class="text"><mark>Задача 2</mark>function scrollPage() {<br>
+            window.scrollTo({<br>
+            top:100,<br>
+            left:0,<br>
+            behavior:'smooth'<br>
+            })<br>
+            }<br>
+            setTimeout(scrollPage, 1000);</p>
+          <p class="text"><mark>Задача 3</mark>const itemOne = document.querySelector('.big-title');<br>
+            const itemTwo = document.querySelector('.attrtibute');<br>
+            const itemThree = document.querySelector('.title');<br>
+            <br>
+            const itemOneCoords = itemOne.getBoundingClientRect();<br>
+            console.log(itemOneCoords);<br>
+            <br>
+            const itemTwoCoords = itemTwo.getBoundingClientRect();<br>
+            console.log(itemTwoCoords);<br>
+            <br>
+            const itemThreeCoords = itemThree.getBoundingClientRect();<br>
+            console.log(itemThreeCoords);</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
